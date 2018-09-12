@@ -82,13 +82,29 @@ public class MarshmallowMonster
 		this.armCount = arms;
 	}
 	
+	//creating if method 
+	public String monsterNose(boolean theNose) 
+	{	
+		this.hasNoses = theNose;
+		
+		//String yesOrNo;
+		
+		if (theNose) 
+		{
+			return "has a nose";
+		}else 
+		{
+			return "doesn't have a nose";
+		}
+	}
+	
 	
 	
 	public String toString()
 	{
 		String description = "Your monster's name is " + name + " , he has " 
 							  + legCount + " legs" 
-							  + ", " + eyeCount + " eyes" + " and " + armCount + " legs";
+							  + ", " + eyeCount + " eyes" + ",  " + armCount + " arms" + ", and " + monsterNose(hasNoses);
 		
 		return description;
 	}
